@@ -1,8 +1,8 @@
-/* Reset básico para remover margens e preenchimentos padrão do navegador */
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
+    box-sizing: border-box;
 }
 
 body {
@@ -10,10 +10,10 @@ body {
     line-height: 1.6;
     background-color: #25002c;
     color: #333;
-    /* Adicione mais estilos para um visual agradável  */
+    
 }
 
-/* Estilos para o cabeçalho e menu de navegação [cite: 15] */
+/* Estilos para o cabeçalho e menu de navegação*/
 header {
     background-color: #25002c;
     color: #fff;
@@ -85,7 +85,7 @@ nav ul li a:focus {
 /* Estilos específicos para a seção de portfólio */
 .portfolio-items {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    flex-wrap: wrap; /*Quebra para a próxima linha */
     gap: 20px; /* Espaçamento entre os itens */
     justify-content: center;
 }
@@ -95,8 +95,8 @@ nav ul li a:focus {
     border: 3px solid #000000;
     border-radius: 8px;
     padding: 20px;
-    flex: 1 1 calc(50% - 40px); /* Dois itens por linha em telas maiores, considerando o gap */
-    min-width: 300px; /* Largura mínima para itens em telas menores */
+    flex: 1 1 calc(50% - 40px); 
+    min-width: 300px; 
     box-shadow: 0 1px 3px rgba(0,0,0,0.08);
     text-align: center;
 }
@@ -121,7 +121,7 @@ nav ul li a:focus {
     background-color: #24013b;
 }
 
-/* Estilos para o formulário de contato [cite: 38] */
+/* Estilos para o formulário de contato*/
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -136,7 +136,7 @@ form {
 }
 
 .form-group label {
-    display: block; /* Garante que o label ocupe uma linha inteira */
+    display: block; 
     margin-bottom: 5px;
     font-weight: bold;
 }
@@ -152,14 +152,14 @@ form {
 }
 
 .form-group textarea {
-    resize: vertical; /* Permite redimensionar verticalmente */
+    resize: vertical; 
 }
 
 button[type="submit"] {
     display: block;
     width: 100%;
     padding: 12px;
-    background-color: #6200ff; /* Cor verde para o botão de envio */
+    background-color: #6200ff; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -184,7 +184,7 @@ footer {
 /* Media queries para responsividade */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Links empilhados em telas menores */
+        flex-direction: column; 
     }
 
     nav ul li {
@@ -197,9 +197,6 @@ footer {
     }
 
     .portfolio-item {
-        flex: 1 1 100%; /* Um item por linha em telas menores */
+        flex: 1 1 100%;
     }
 }
-
-/* Adicione comentários para explicar seu código  */
-/* Este é um comentário de CSS, útil para documentar o código. */
