@@ -1,0 +1,205 @@
+/* Reset básico para remover margens e preenchimentos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #25002c;
+    color: #333;
+    /* Adicione mais estilos para um visual agradável  */
+}
+
+/* Estilos para o cabeçalho e menu de navegação [cite: 15] */
+header {
+    background-color: #25002c;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky; /* Menu visível em todas as páginas */
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Para alinhar os links horizontalmente */
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none; /* Remove sublinhado dos links */
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Estilos para as seções de conteúdo */
+.section {
+    padding: 60px 20px; /* Mais preenchimento para separar as seções */
+    margin: 20px auto; /* Centraliza a seção e adiciona margem */
+    max-width: 960px; /* Largura máxima para o conteúdo */
+    background-color: #44002d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+    border-radius: 8px; /* Cantos arredondados */
+    color: #fff;
+}
+
+.section h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.section h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.section p, .section ul {
+    margin-bottom: 20px;
+}
+
+.section ul {
+    list-style-position: inside; /* Mantém os marcadores dentro do texto */
+    padding-left: 20px; /* Indentação para listas */
+}
+
+/* Estilos específicos para a seção de portfólio */
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center;
+}
+
+.portfolio-item {
+    background-color: #44002d;
+    border: 3px solid #000000;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 calc(50% - 40px); /* Dois itens por linha em telas maiores, considerando o gap */
+    min-width: 300px; /* Largura mínima para itens em telas menores */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.portfolio-item h3 {
+    margin-bottom: 10px;
+    color: #6e50da;
+}
+
+.portfolio-item a {
+    display: inline-block;
+    background-color: #6200ff;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-item a:hover {
+    background-color: #24013b;
+}
+
+/* Estilos para o formulário de contato [cite: 38] */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #30015c;
+    border-radius: 8px;
+    background-color: #25002c;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block; /* Garante que o label ocupe uma linha inteira */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #6200ff; /* Cor verde para o botão de envio */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #24013b;
+}
+
+/* Estilos para o rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #25002c;
+    color: #fff;
+    margin-top: 30px;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Links empilhados em telas menores */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .section {
+        padding: 30px 15px;
+        margin: 15px auto;
+    }
+
+    .portfolio-item {
+        flex: 1 1 100%; /* Um item por linha em telas menores */
+    }
+}
+
+/* Adicione comentários para explicar seu código  */
+/* Este é um comentário de CSS, útil para documentar o código. */
